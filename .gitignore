@@ -1,0 +1,13 @@
+# -------------------------
+# Ignore the IDE's internal cache and UI state
+.config/
+.display/
+export_state.json
+
+# Ignore the build folders
+bin/
+obj/
+
+# Ignore logs and temporary crash data
+variable_sum.txt
+ui_state.json
