@@ -12,8 +12,8 @@
   "out_tilehborder":2,
   "out_tilevborder":2,
   "parent":{
-    "name":"creatures",
-    "path":"folders/game/sprites/creatures.yy",
+    "name":"tilesets",
+    "path":"folders/game/sprites/creatures/tilesets.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"WalkAnimation",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"WalkAnimation",
+  "parent":{
+    "name":"scripts",
+    "path":"folders/game/scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

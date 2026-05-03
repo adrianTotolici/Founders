@@ -41,4 +41,15 @@ draw_set_color(c_white);
 var _cols = sprite_get_width(tile_sprite) / tile_size;
 var _left = (tile_index % _cols) * tile_size;
 var _top  = floor(tile_index / _cols) * tile_size;
-draw_sprite_part(tile_sprite, 0, _left, _top, tile_size, tile_size, x, y);
+
+if (is_moving) {
+    if (image_xscale == -1) {
+        draw_sprite_ext(sprite_index, image_index, x + sprite_width, y, -1, 1, 0, c_white, 1);
+    } else {
+        draw_sprite_ext(sprite_index, image_index, x, y, 1, 1, 0, c_white, 1);
+    }
+}
+else {
+    // Idle tile sprite
+    draw_sprite_part(tile_sprite, 0, _left, _top, tile_size, tile_size, x, y);
+}
