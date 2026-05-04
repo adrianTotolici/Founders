@@ -12,3 +12,5 @@ menu_btn_hover = point_in_rectangle(_mx, _my,
 if (menu_btn_hover && mouse_check_button_pressed(mb_left)) {
 	room_goto(rm_menu);
 }
+
+mouse_on_ui = menu_btn_hover || (_my > display_get_gui_height() - _ui_bar_h);

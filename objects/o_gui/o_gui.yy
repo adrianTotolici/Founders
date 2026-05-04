@@ -1,17 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"o_game_gui",
+  "%Name":"o_gui",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"o_game_gui",
+  "name":"o_gui",
   "overriddenProperties":[],
   "parent":{
-    "name":"objects",
-    "path":"folders/game/objects.yy",
+    "name":"object",
+    "path":"folders/common/object.yy",
   },
   "parentObjectId":null,
   "persistent":false,

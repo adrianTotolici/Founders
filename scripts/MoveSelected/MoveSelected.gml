@@ -1,4 +1,8 @@
-function MoveSelected(_id, _movable){
+function MoveSelected(_id, _movable, _ui_blocked){
+	
+	if (_ui_blocked){
+		return;
+	}
 
 	if (_movable) {
 		with(_id) {
@@ -22,7 +26,7 @@ function MoveSelected(_id, _movable){
 	            // Restriction: Only set target if within map boundaries
 	            if (_grid_x >= 0 && _grid_x < _map_w && _grid_y >= 0 && _grid_y < _map_h) {
 	                target_x = mouse_x - (tile_size / 2);
-	                target_y = mouse_y - (tile_size / 2);
+	                target_y = mouse_y - (tile_size / 2)-35;
 					
 					target_confirmed = true;
 	            }

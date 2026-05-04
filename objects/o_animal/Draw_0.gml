@@ -44,7 +44,7 @@ var _top  = floor(tile_index / _cols) * tile_size;
 
 if (is_moving) {
     if (image_xscale == -1) {
-        draw_sprite_ext(sprite_index, image_index, x + sprite_width, y, -1, 1, 0, c_white, 1);
+        draw_sprite_ext(sprite_index, image_index, x - sprite_width, y, -1, 1, 0, c_white, 1);
     } else {
         draw_sprite_ext(sprite_index, image_index, x, y, 1, 1, 0, c_white, 1);
     }

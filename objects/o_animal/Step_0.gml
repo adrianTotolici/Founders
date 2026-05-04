@@ -1,11 +1,17 @@
-MoveSelected(id, movable);
+// Reference the manager's live variable directly
+var _blocked = o_game_manager.mouse_on_ui;
 
-// --- Movment detection ----
-is_moving = (x != xprevious) || (y != yprevious)
+if (!_blocked) {
+    // Process movement and selection only if the manager says the path is clear
+    MoveSelected(id, movable, _blocked);
 
-var _dx = x - xprevious;
-var _dy = y - yprevious;
-move_angle = point_direction(0, 0, _dx, _dy);
-mirror = (move_angle > 90 && move_angle < 270);
+    // --- Movement detection ----
+    is_moving = (x != xprevious) || (y != yprevious);
 
-WalkAnimation(anim_human_walk, tile_index)
+    var _dx = x - xprevious;
+    var _dy = y - yprevious;
+    move_angle = point_direction(0, 0, _dx, _dy);
+    mirror = (move_angle > 90 && move_angle < 270);
+
+    WalkAnimation(anim_human_walk, tile_index);
+}

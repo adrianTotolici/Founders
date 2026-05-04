@@ -16,7 +16,7 @@
     {"name":"o_animal","order":4,"path":"objects/o_animal/o_animal.yy",},
     {"name":"o_btn","order":1,"path":"objects/o_btn/o_btn.yy",},
     {"name":"o_camera","order":2,"path":"objects/o_camera/o_camera.yy",},
-    {"name":"o_game_gui","order":3,"path":"objects/o_game_gui/o_game_gui.yy",},
+    {"name":"o_gui","order":2,"path":"objects/o_gui/o_gui.yy",},
     {"name":"o_map","order":1,"path":"objects/o_map/o_map.yy",},
     {"name":"o_menu_gui","order":4,"path":"objects/o_menu_gui/o_menu_gui.yy",},
     {"name":"o_menu_manager","order":3,"path":"objects/o_menu_manager/o_menu_manager.yy",},
