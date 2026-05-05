@@ -44,6 +44,7 @@
     {"id":{"name":"o_menu_manager","path":"objects/o_menu_manager/o_menu_manager.yy",},},
     {"id":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},},
     {"id":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
+    {"id":{"name":"ExecuteUICommand","path":"scripts/ExecuteUICommand/ExecuteUICommand.yy",},},
     {"id":{"name":"MoveSelected","path":"scripts/MoveSelected/MoveSelected.yy",},},
     {"id":{"name":"RandomBiasNumb","path":"scripts/RandomBiasNumb/RandomBiasNumb.yy",},},
     {"id":{"name":"TileData","path":"scripts/TileData/TileData.yy",},},

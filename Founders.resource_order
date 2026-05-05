@@ -21,6 +21,7 @@
     {"name":"o_menu_gui","order":4,"path":"objects/o_menu_gui/o_menu_gui.yy",},
     {"name":"o_menu_manager","order":3,"path":"objects/o_menu_manager/o_menu_manager.yy",},
     {"name":"rm_menu","order":1,"path":"rooms/rm_menu/rm_menu.yy",},
+    {"name":"ExecuteUICommand","order":4,"path":"scripts/ExecuteUICommand/ExecuteUICommand.yy",},
     {"name":"MoveSelected","order":2,"path":"scripts/MoveSelected/MoveSelected.yy",},
     {"name":"RandomBiasNumb","order":1,"path":"scripts/RandomBiasNumb/RandomBiasNumb.yy",},
     {"name":"WalkAnimation","order":3,"path":"scripts/WalkAnimation/WalkAnimation.yy",},

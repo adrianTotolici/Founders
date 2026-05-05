@@ -40,7 +40,7 @@ menu_btn_text = "Menu";
 menu_btn_hover = false;
 
 // ui layout
- _ui_bar_h = 120
+_ui_bar_h = 120
 _ui_info_w = 240
 mouse_on_ui = false;
 instance_create_depth(0, 0, _layer_id, o_gui, {
@@ -58,15 +58,16 @@ instance_create_layer(init_x, init_y, _layer_id, o_animal, {
 	tile_index: 4,
 	tile_size: 64,
 	movable: true,
-	//move_speed: 4,
 	target_x: init_x,
 	target_y: init_y,
-	//hp: 10,
-	//name: "Human",
 	_stats: [
         { label: "name",   key: "Human" },
         { label: "hp", key: 10   },
         { label: "speed",  key: 4 },
 		{ label: "attack", key: 2 }
-    ]
+    ],
+	_ui_commands: [
+		{ label: "Build", action: "build" },
+		{ label: "Sit", action: "sit" }
+	]
 });
