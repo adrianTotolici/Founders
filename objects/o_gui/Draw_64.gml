@@ -1,6 +1,6 @@
 // 1. Draw the main Bottom Bar background
 draw_set_color(c_dkgray);
-draw_set_alpha(0.8);
+draw_set_alpha(1);
 draw_rectangle(0, gui_h - bar_h, gui_w, gui_h, false);
 
 // 2. Draw the vertical divider for the Info Section
