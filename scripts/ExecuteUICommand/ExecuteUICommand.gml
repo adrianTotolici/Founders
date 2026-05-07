@@ -4,16 +4,12 @@ function ExecuteUiCommand(_inst, _action)
 
     switch (_action)
     {
-        case "move":
-            _inst.target_confirmed = false;
+        case "build":
+			show_debug_message("Build");
         break;
 
-        case "stop":
-            _inst.target_confirmed = false;
-        break;
-
-        case "produce":
-            show_debug_message("Produce unit");
+        case "gather":
+            show_debug_message("Gather");
         break;
     }
 }

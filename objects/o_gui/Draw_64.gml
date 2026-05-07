@@ -44,24 +44,30 @@ if (_sel != noone && variable_instance_exists(_sel, "_ui_commands"))
 {
     var cmds = _sel._ui_commands;
 
-    var btn_w = 100;
-    var btn_h = 30;
-    var padding = 10;
-
     var start_x = info_w + padding;
     var b_y = gui_h - bar_h + padding;
 
-    for (var i = 0; i < array_length(cmds); i++)
-    {
+    for (var i = 0; i < array_length(cmds); i++) {
+		var btn_w = cmds[i]._button_w;
+		var btn_h = cmds[i]._button_h;
+		
         var b_x = start_x + i * (btn_w + padding);
 
         // Button background
         draw_set_color(c_gray);
         draw_rectangle(b_x, b_y, b_x + btn_w, b_y + btn_h, false);
 
-        // Label
+       // Draw icon from tileset
+		if (cmds[i].icon != undefined) {
+		    var spr = cmds[i].icon.sprite;
+		    var idx = cmds[i].icon.index;
+		    var cols = sprite_get_width(spr) div cmds[i].icon. _sp_width;
+		    var sx = (idx mod cols) *  cmds[i].icon._sp_width;
+		    var sy = (idx div cols) *  cmds[i].icon._sp_height;
+
+		    draw_sprite_part(spr, 0, sx, sy,  cmds[i].icon._sp_width,  cmds[i].icon._sp_height, b_x, b_y);
+		}
         draw_set_color(c_white);
-        draw_text(b_x + 10, b_y + 7, cmds[i].label);
     }
 }
 

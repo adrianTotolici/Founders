@@ -2,13 +2,10 @@ var _cam_x = camera_get_view_x(cam);
 var _cam_y = camera_get_view_y(cam);
 var _ui_blocked = o_game_manager.mouse_on_ui;
 
-// Start drag
-if (!_ui_blocked) {
-    if (mouse_check_button_pressed(mb_left)) {
-        dragging = true;
-        mouse_x_start = device_mouse_raw_x(0);
-        mouse_y_start = device_mouse_raw_y(0);
-    }
+if (mouse_check_button_pressed(mb_left) && !_ui_blocked) {
+    dragging = true;
+    mouse_x_start = device_mouse_raw_x(0);
+    mouse_y_start = device_mouse_raw_y(0);
 }
 
 if (mouse_check_button_released(mb_left)) {

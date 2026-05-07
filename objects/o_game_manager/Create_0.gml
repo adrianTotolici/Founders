@@ -67,7 +67,7 @@ instance_create_layer(init_x, init_y, _layer_id, o_animal, {
 		{ label: "attack", key: 2 }
     ],
 	_ui_commands: [
-		{ label: "Build", action: "build" },
-		{ label: "Sit", action: "sit" }
+		{ label: "Build", action: "build", _button_w: 64, _button_h: 64, icon: { sprite: spr_ts_ui_command, index: 1, _sp_width: 64, _sp_height: 64 }},
+		{ label: "Gather", action: "gather", _button_w: 64, _button_h: 64, icon: { sprite: spr_ts_ui_command, index: 2, _sp_width: 64, _sp_height: 64 }}
 	]
 });
