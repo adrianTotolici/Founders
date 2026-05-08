@@ -7,6 +7,16 @@ var _object_layer_id = layer_get_id("obj")
 
 global.map_data = ds_grid_create(_width, _height);
 
+default_cursor_sprites = [
+    spr_mouse_arrow_1,
+    spr_mouse_arrow_2,
+    spr_mouse_arrow_3,
+    spr_mouse_arrow_4,
+    spr_mouse_arrow_5,
+    spr_mouse_arrow_6
+];
+var random_cursor_index = irandom(array_length(default_cursor_sprites) - 1);
+
 // create_map
 for (var i = 0; i < _width; i++) {
 	for (var j = 0; j < _height; j++){
@@ -90,7 +100,7 @@ for (var i = 0; i < berry_bush_amount; i++)
             tile_index: 1,
 			_stats: [
 		        { label: "name",   key: "Berry bush" },
-		        { label: "amount", key: 10   }
+		        { label: "food", key: 10   }
 		    ]
 		});
     }

@@ -72,3 +72,5 @@ if (_sel != noone && variable_instance_exists(_sel, "_ui_commands"))
     }
 }
 
+draw_sprite(cursor_sprite, 0, device_mouse_x_to_gui(0), device_mouse_y_to_gui(0));
+window_set_cursor(cr_none);
