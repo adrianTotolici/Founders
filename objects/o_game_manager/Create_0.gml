@@ -71,3 +71,27 @@ instance_create_layer(init_x, init_y, _layer_id, o_animal, {
 		{ label: "Gather", action: "gather", _button_w: 64, _button_h: 64, icon: { sprite: spr_ts_ui_command, index: 2, _sp_width: 64, _sp_height: 64 }}
 	]
 });
+
+//add resources on map at random position
+var berry_bush_amount = 25; // how many berry bushes to spawn
+for (var i = 0; i < berry_bush_amount; i++)
+{
+    var gx = irandom(ds_grid_width(global.map_data) - 1);
+    var gy = irandom(ds_grid_height(global.map_data) - 1);
+    if (global.map_data[# gx, gy].is_walkable)
+    {
+        var px = gx * 64;
+        var py = gy * 64;
+        instance_create_layer(px, py, _layer_id, o_resource, {
+			resource_type: "berry_bush",
+			movable: false,
+			tile_size: 64,
+			tile_sprite: spr_ts_resources,
+            tile_index: 1,
+			_stats: [
+		        { label: "name",   key: "Berry bush" },
+		        { label: "amount", key: 10   }
+		    ]
+		});
+    }
+}

@@ -1,29 +1,15 @@
-function MoveSelected(_id, _movable, _ui_blocked)
+function Movment(_id, _movable, _ui_blocked)
 {
     if (!_movable) return;
-
     with (_id)
     {
-
         if (!_ui_blocked)
         {
-            // --- Selection logic ---
-            if (mouse_check_button_pressed(mb_left))
-            {
-                var _mx = mouse_x;
-                var _my = mouse_y;
-
-                selected =
-                    (_mx >= x && _mx <= x + tile_size &&
-                     _my >= y && _my <= y + tile_size);
-            }
-
             // --- Destination logic ---
             if (selected && mouse_check_button_pressed(mb_right))
             {
                 var _grid_x = floor(mouse_x / tile_size);
                 var _grid_y = floor(mouse_y / tile_size);
-
                 var _map_w = ds_grid_width(global.map_data);
                 var _map_h = ds_grid_height(global.map_data);
 

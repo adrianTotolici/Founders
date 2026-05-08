@@ -1,8 +1,9 @@
-var _sel = noone;
-with(o_animal) { 
-	if (selected) 
+var _sel=noone;
+with(o_selectable) { 
+	if (selected) {
 		_sel = id;
 		break;
+	}
 }
 
 if (_sel != noone && variable_instance_exists(_sel, "_ui_commands"))

@@ -15,10 +15,11 @@ draw_set_color(c_ltgray);
 
 // Info Logic
 var _sel = noone;
-with(o_animal) { 
-	if (selected) 
+with(o_selectable) { 
+	if (selected) {
 		_sel = id;
 		break;
+	}
 }
 
 // Info draw

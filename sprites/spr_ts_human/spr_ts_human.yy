@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"tilesets",
-    "path":"folders/game/sprites/creatures/tilesets.yy",
+    "path":"folders/game/sprites/creatures/human/tilesets.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

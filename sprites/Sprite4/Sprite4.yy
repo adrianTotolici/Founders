@@ -26,8 +26,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"creatures",
-    "path":"folders/game/sprites/creatures.yy",
+    "name":"human",
+    "path":"folders/game/sprites/creatures/human.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

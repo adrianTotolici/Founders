@@ -1,25 +1,25 @@
 {
   "$GMTileSet":"v1",
-  "%Name":"ts_human",
+  "%Name":"ts_resources",
   "autoTileSets":[],
   "macroPageTiles":{
     "SerialiseHeight":0,
     "SerialiseWidth":0,
     "TileSerialiseData":[],
   },
-  "name":"ts_human",
+  "name":"ts_resources",
   "out_columns":4,
   "out_tilehborder":2,
   "out_tilevborder":2,
   "parent":{
     "name":"tilesets",
-    "path":"folders/game/sprites/creatures/human/tilesets.yy",
+    "path":"folders/game/sprites/plants/tilesets.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
   "spriteId":{
-    "name":"spr_ts_human",
-    "path":"sprites/spr_ts_human/spr_ts_human.yy",
+    "name":"spr_ts_resources",
+    "path":"sprites/spr_ts_resources/spr_ts_resources.yy",
   },
   "spriteNoExport":false,
   "textureGroupId":{

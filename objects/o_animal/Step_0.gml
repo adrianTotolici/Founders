@@ -1,7 +1,5 @@
-// Reference the manager's live variable directly
-var _blocked = o_game_manager.mouse_on_ui;
-
-MoveSelected(id, movable, _blocked);
+event_inherited();
+Movment(id, movable, _blocked);
 
 // --- Movement detection ----
 is_moving = (x != xprevious) || (y != yprevious);

@@ -1,11 +1,9 @@
-depth = -1;
-selected = false;
+event_inherited();
 target_confirmed = false;
 
 // --- State and Movement ---
 target_x = x;
 target_y = y;
-is_moving = false;
 
 for (var i = 0; i < array_length(_stats); i++) {
     var _item = _stats[i];

@@ -29,7 +29,7 @@
   "origin":0,
   "parent":{
     "name":"animation",
-    "path":"folders/game/sprites/creatures/animation.yy",
+    "path":"folders/game/sprites/creatures/human/animation.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
