@@ -12,3 +12,6 @@ dragging = false;
 
 mouse_x_start = 0;
 mouse_y_start = 0;
+
+camera_set_view_pos(cam, 0, o_game_manager.top_bar_h);
+

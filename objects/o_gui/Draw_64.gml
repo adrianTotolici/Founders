@@ -1,5 +1,18 @@
+// === TOP BAR ===
+var top_h = 60; // same idea as bar_h but for top
+
+draw_set_color(c_black);
+draw_set_alpha(1);
+draw_rectangle(0, 0, gui_w, top_h, false);
+
+// Food counter
+draw_set_color(c_white);
+draw_set_halign(fa_left);
+draw_set_valign(fa_middle);
+draw_text(20, top_h * 0.5, "Food: " + string(global.food));
+
 // 1. Draw the main Bottom Bar background
-draw_set_color(c_dkgray);
+draw_set_color(c_black);
 draw_set_alpha(1);
 draw_rectangle(0, gui_h - bar_h, gui_w, gui_h, false);
 

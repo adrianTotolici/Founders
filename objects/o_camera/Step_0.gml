@@ -27,17 +27,18 @@ if (dragging && !_ui_blocked) {
 var _new_x = camera_get_view_x(cam);
 var _new_y = camera_get_view_y(cam);
 
-// Read UI bar height
-var _bar_h = o_game_manager._ui_bar_h;
+// Read UI bar heights
+var _bottom_bar = o_game_manager.ui_bar_h;
+var _top_bar    = o_game_manager.top_bar_h;
 
 // The camera should not show the area hidden behind the UI
-var _visible_cam_h = _cam_h - _bar_h;
+var _visible_cam_h = _cam_h - _bottom_bar +_top_bar;
 
 // Compute max camera Y
 var _max_y = room_height - _visible_cam_h;
 
-// Clamp
-_new_x = clamp(_new_x, 0, room_width  - _cam_w);
-_new_y = clamp(_new_y, 0, _max_y);
+// Clamp so camera never goes above top bar or below bottom bar
+_new_x = clamp(_new_x, 0, room_width - _cam_w);
+_new_y = clamp(_new_y, _top_bar, _max_y);
 
 camera_set_view_pos(cam, _new_x, _new_y);

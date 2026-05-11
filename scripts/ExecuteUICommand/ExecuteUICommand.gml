@@ -9,7 +9,7 @@ function ExecuteUiCommand(_inst, _action)
         break;
 
         case "gather":
-            show_debug_message("Gather");
-        break;
+			_inst.state = "gather_waiting";
+		break;
     }
 }
