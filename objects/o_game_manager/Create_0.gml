@@ -85,7 +85,8 @@ var init_y = 10;
 
 instance_create_layer(init_x, init_y, layer_map, o_animal, {
     tile_sprite: spr_ts_human,
-    tile_index: 4,
+    walk_index: 4,
+	gather_index: 9,
     tile_size: 64,
     movable: true,
     target_x: init_x,
@@ -132,7 +133,7 @@ for (var i = 0; i < berry_bush_amount; i++) {
             tile_index: 1,
             _stats: [
                 { label: "name", key: "Berry bush" },
-                { label: "food", key: 10 }
+                { label: "amount", key: 10 }
             ]
         });
     }

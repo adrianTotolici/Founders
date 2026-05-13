@@ -4,3 +4,6 @@ for (var i = 0; i < array_length(_stats); i++) {
     if (_item.label == "amount")    amount = _item.key;
     if (_item.label == "name")  name = _item.key;
 }
+
+draw_set_color(c_white);
+draw_text(x, y - 16, string(amount));

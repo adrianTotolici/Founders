@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"GatherAnimation",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"GatherAnimation",
+  "parent":{
+    "name":"scripts",
+    "path":"folders/game/scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

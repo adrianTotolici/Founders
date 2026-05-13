@@ -52,7 +52,6 @@ with (o_resource) {
     if (mx >= x && mx <= x + tile_size && my >= y && my <= y + tile_size)
     {
         other.hover_resource = true;
-		show_debug_message("hover")
         break;
     }
 }
@@ -73,28 +72,53 @@ with (o_animal) {
 // --------------------------------------------------------------------------------------------- Cursor Logic
 if (hover_resource && human_selected) {
     cursor_sprite = spr_mouse_gather;
-	show_debug_message("mouse")
 } else {
     cursor_sprite = default_cursor_sprites[random_cursor_index];
 }
 
 
 // --------------------------------------------------------------------------------------------- Gather Logic
-if (human_selected && selected_unit.state == "gather_waiting") {
-    if (mouse_check_button_pressed(mb_left))
-    {
-        var _mx = camera_get_view_x(view_camera[0]) + device_mouse_x(0);
-        var _my = camera_get_view_y(view_camera[0]) + device_mouse_y(0);
+if (mouse_check_button_pressed(mb_right) && human_selected && !mouse_on_ui) {
+    var res = noone;
 
-        with (o_resource)
+    with (o_resource)
+    {
+        if (mx >= x && mx <= x + tile_size &&
+            my >= y && my <= y + tile_size)
         {
-            if (_mx >= x && _mx <= x + tile_size &&
-                _my >= y && _my <= y + tile_size)
-            {
-                other.selected_unit.target_resource = id;
-                other.selected_unit.state = "gather_moving";
-                break;
-            }
+            res = id;
+            break;
         }
     }
+
+    if (res != noone)
+    {
+        selected_unit.state = "gather_moving";
+        selected_unit.target_resource = res;
+        selected_unit.target_confirmed = true;
+
+        show_debug_message("GATHER COMMAND: human moving to resource");
+    }
+
+	
+	// ------------------------------------------------------------
+	// DEBUG: LIST ALL RESOURCES WHEN CLICKED
+	// ------------------------------------------------------------
+	if (mouse_check_button_pressed(mb_right)) {
+
+	    show_debug_message("----- RESOURCE LIST -----");
+
+	    with (o_resource) {
+	        show_debug_message(
+	            "ID: " + string(id) +
+	            " | X: " + string(x) +
+	            " | Y: " + string(y) +
+	            " | TILE: " + string(tile_index)
+	        );
+	    }
+
+	    show_debug_message("--------------------------");
+	}
+
 }
+
